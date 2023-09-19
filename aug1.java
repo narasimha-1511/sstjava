@@ -1,5 +1,5 @@
 import java.util.*;
-public class j1{
+public class aug1{
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
 
@@ -34,6 +34,7 @@ public class j1{
                 System.out.println("*"+x);
              }
         }
+        in.close();
     
     
     

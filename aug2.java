@@ -1,5 +1,5 @@
 import java.util.*;
-public class j1{
+public class aug2{
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
 
@@ -217,5 +217,6 @@ public class j1{
             System.out.println();
             }
               }
+              in.close();
     }
 }

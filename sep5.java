@@ -1,0 +1,3 @@
+public class sep5 {
+    // TOdays Class Was Inheritance.java------......
+}
