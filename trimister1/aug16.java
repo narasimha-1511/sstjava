@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class aug15{
+public class aug16{
 
 
     //Write a function  rotate the array k times

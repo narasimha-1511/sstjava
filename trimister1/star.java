@@ -1,5 +1,5 @@
 import java.util.*;
-public class j1{
+public class star{
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
 
@@ -43,7 +43,7 @@ public class j1{
 
  int N = in.nextInt();
 
-               int i=0,j=0,k=0,z=0;
+               int i=0,j=0,z=0;
                 
                 int a=0,b=0,c=0,d=0;
 
@@ -75,7 +75,7 @@ public class j1{
                      for(d=c-b-a;d>0;d--)// this loops prints the no of spaces (c-b gives the difference between ((total charecter)-stars)-a ) 
                      System.out.print(" ");
 
-                      for(b=b;b>=0;b--)      // the no of stars to be printed are calculated above by b
+                      for(;b>=0;b--)      // the no of stars to be printed are calculated above by b
                       System.out.print("*");
 
                       System.out.println();// this creates a new line after printitng each row till n rows
@@ -91,7 +91,7 @@ public class j1{
                      for(d=c-b-a;d>0;d--)
                      System.out.print(" ");
 
-                      for(b=b;b>=0;b--)
+                      for(;b>=0;b--)
                       System.out.print("*");
 
                       System.out.println();
@@ -110,7 +110,8 @@ public class j1{
                    
                     System.out.println();
                 }
-
+          in.close();
          }
+         
         }
         

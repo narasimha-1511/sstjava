@@ -198,6 +198,29 @@ public class t {
     return min_length+1;
     }
 
+    public static int[] sort(final int[] C, int B) {
+        int A[] = new int[C.length];
+        for(int i=0;i<C.length;i++)A[i]=C[i];
+
+        int min = Integer.MAX_VALUE;
+        int minIn=Integer.MAX_VALUE;
+
+        for (int i=0;i<=B;i++){
+            for(int j=i;j<C.length;j++){
+                if(min>A[j]){
+                    min=A[j];
+                    minIn=j;
+                }
+            }
+            int temp = A[i];
+            A[i]=A[minIn];
+            A[minIn]=temp;
+        }
+
+        return A;
+    }
+    
+
 
 
 
@@ -232,7 +255,85 @@ public class t {
         // System.out.println(PickfromBothSides(arr,3));
 
        // System.out.println(colorFulNum(32467));
-       ArrayList<Integer> hey = new ArrayList<Integer>(Arrays.asList(new Integer[]{1,3,2}));
-       System.out.println(ClosetMinMax(hey));
+       //ArrayList<Integer> hey = new ArrayList<Integer>(Arrays.asList(new Integer[]{1,3,2}));
+       //System.out.println(ClosetMinMax(hey));
+       
+       
+    //    int A[]={8,16,80,55,32,8,38,40,65,18,15,45,50,38,54,52,23,74,81,42,28,16,66,35,91,36,44,9,85,58,59,49,75,20,87,60,17,11,39,62,20,17,46,26,81,92};
+       
+    
+    
+    // Java code to demonstrate the
+// working of substring(int begIndex, int endIndex)
+
+// Driver Class
+		// Initializing String
+        // int A[] = {10,10,8,3};
+        // HashMap<Integer,Integer> map = new HashMap();
+        // int sum=0,max=0;
+        // for(int i=0;i<A.length;i++){
+        //     if(map.containsKey(A[i])){
+        //         int freq = map.get(A[i]);
+        //         map.put(A[i],++freq);
+        //     }else{
+        //         map.put(A[i],1);
+        //     }
+        //     sum+=A[i];
+        // }
+        // for(Integer key: map.keySet()){
+        //     int temp  = (key*map.get(key));
+        //     if(max<temp){
+        //         max=temp;
+        //     }
+        // }
+        // System.out.println(sum-max);
+    
+        // int [][]A = {
+        //     {1, 2, 3},
+        //     {4, 5, 6},
+        //     {7, 8, 9}
+        //     };
+        //     int B =2;
+        // int j = A[0].length-1,i=0;
+        // int ans = -1;
+
+        // while(i<A.length && j>=0){
+        //     System.out.println(A[i][j]);
+        //     if(A[i][j]==B){
+        //         ans = (i+1)*1009+(j+1);
+        //     }
+        //     else if(B<A[i][j]){
+        //         j--;
+        //     }else{
+        //         i++;
+        //     }
+        // }
+        // System.out.println(ans);
+        boolean ans =isReachableAtTime(1, 1, 2, 2, 1);
+        System.out.println(ans);
+
+    }
+    public static boolean isReachableAtTime(int sx, int sy, int fx, int fy, int t) {
+        if(sx==fx && sy==fy)return t>=2;
+        //Here WE need to find  the shortset path
+        int TimeTaken = 0;
+        while(sx<fx && sy<fy){
+            sx++;
+            sy++;
+            TimeTaken++;
+        }
+        while(sx==fx && sy<fy){
+            sy++;
+            TimeTaken++;
+        }
+        while(sy==fy && sx<fx){
+            sx++;
+            TimeTaken++;
+        }
+        if(TimeTaken<=t){
+            return true;
+        }
+        System.out.println(TimeTaken);
+        return false;
     }
 }
