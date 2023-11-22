@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Aggressive_cows",
+            "request": "launch",
+            "mainClass": "Random_Questions.Aggressive_cows",
+            "projectName": "Java_f8677abb"
+        },
+        {
+            "type": "java",
+            "name": "nov7",
+            "request": "launch",
+            "mainClass": "nov7",
+            "projectName": "Java_f8677abb"
+        },
+        {
+            "type": "java",
+            "name": "Classes",
+            "request": "launch",
+            "mainClass": "Classes",
+            "projectName": "Java_f8677abb"
+        },
+        {
+            "type": "java",
             "name": "sep27",
             "request": "launch",
             "mainClass": "sep27",
